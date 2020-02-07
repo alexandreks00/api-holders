@@ -1,0 +1,7 @@
+---
+default: --no-source --color --format pretty -p json #-p retry # or --format progress
+
+ci: -p json --format pretty # or --format progress
+html: --format html --out=log/reports.html
+json: --format json --out=log/reports.json
+retry: --retry 1

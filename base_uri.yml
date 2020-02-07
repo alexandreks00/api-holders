@@ -1,0 +1,9 @@
+
+dev:
+  api: https://api-cateno.sensedia.com/dev
+
+hml:
+  api: https://api-cateno.sensedia.com/hlg
+
+qa:
+  api: https://api-cateno.sensedia.com/qa

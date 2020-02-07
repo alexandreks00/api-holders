@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Resultado Automação API Portadores</title><link rel="icon" href="https://reportbuilder.rajatthareja.com/rb.ico">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+<link href="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.8/css/report.builder.min.css" rel="stylesheet">
+</head><body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script><header class="brown lighten-5">
+<div class="row brown lighten-1">
+<div class="col m6 hide-on-small-only">
+<h5 class="truncate white-text tooltipped" data-tooltip="Resultado Automação API Portadores">Resultado Automação API Portadores</h5>
+</div><div class="col m6 s12 brown lighten-1">
+<ul class="tabs brown lighten-1 row" style="overflow-x: hidden">
+<li class="tab col s3">
+<a class="brown lighten-3 active blue-text waves-effect waves-light tooltipped" data-tooltip="Results Overview" href="#overview"><i class="material-icons">assessment</i> Overview</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios by Features" href="#features"><i class="material-icons">view_headline</i> Features</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios Summary Table" href="#summary"><i class="material-icons">view_comfy</i> Summary</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Failed Scenarios" href="#errors"><i class="material-icons">bug_report</i> Errors</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<div id="g0f0s0" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@regressao</div><div class="chip"><i class="material-icons rotate-45">label</i>@company_post</div><h5>Post Company (46.367s)</h5>
+features/specs/companies/post_companies.feature:20<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;Cruiser Linhas Aereas Ltda&quot;&quot;1996-05-22&quot;&quot;01247325000136&quot;&quot;166&quot;&quot;5&quot;&quot;2&quot; (7.117s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies (8.266s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 201 (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Customer Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Account Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Card Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Phone Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Addresses Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve salvar o novo portador na base Cateno (30.984s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s1" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@reprovado</div><h5>Post Cadastro REPROVADO (19.214s)</h5>
+features/specs/companies/post_companies.feature:32<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;Elenilson Ferreira da Silva&quot;&quot;2015-10-07&quot;&quot;23429135000172&quot;&quot;166&quot;&quot;5&quot;&quot;2&quot; (15.154s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies (4.060s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> deve exibir o codigo de erro &quot;4010&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve exibir a mensagem &quot;Situação Cadastral Irregular. Cliente Não Cadastrado.&quot; (0.000s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s2" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@customers_pendente</div><h5>Post Cadastro JA PENDENTE - Segunda tentativa de cadastro (8.830s)</h5>
+features/specs/companies/post_companies.feature:45<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;Teste CNPJ 0&quot;&quot;1967-07-04&quot;&quot;97652287000176&quot;&quot;166&quot;&quot;5&quot;&quot;2&quot; (6.557s)</li>
+<li class="collection-item step passed">
+<b>E </b> que o cadastro do portador esteja na Mesa (1.012s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies (1.261s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> deve exibir o codigo de erro &quot;4008&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve exibir a mensagem &quot;Portador 97652287000176 está no estágio pré cadastro com produto 5 do intermediario 166&quot; (0.000s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s3" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@customers</div><div class="chip"><i class="material-icons rotate-45">label</i>@regressao</div><div class="chip"><i class="material-icons rotate-45">label</i>@Perfilamento</div><h5>Post Perfilamento (6.098s)</h5>
+features/specs/companies/post_companies.feature:56<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;&lt;companyName&gt;&quot;&quot;1999-07-29&quot;&quot;83576592000111&quot;&quot;1&quot;&quot;5&quot;&quot;&lt;commercialOriginId&gt;&quot; (5.143s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies (0.950s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> deve exibir o retorno de erro de Perfilamento &quot;4024&quot; (0.004s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s4" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@neurotechPJ</div><h5>Post Cadastro PENDENTE Neurotech (9.699s)</h5>
+features/specs/companies/post_companies.feature:72<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;Company Pendente Neurotech&quot;&quot;1967-07-04&quot;&quot;83042563000170&quot;&quot;166&quot;&quot;5&quot;&quot;2&quot; (4.619s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies (1.291s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 400 (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve exibir o codigo de erro &quot;4008&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve exibir a mensagem &quot;Portador 83042563000170 está no estágio pré cadastro com produto 5 do intermediario 166&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve salvar o portador na base de Pendentes PJ (3.789s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f1s0" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@noholdervalidation</div><div class="chip"><i class="material-icons rotate-45">label</i>@regressao</div><div class="chip"><i class="material-icons rotate-45">label</i>@company</div><h5>Post Cadastro - cenario positivo (28.119s)</h5>
+features/specs/companies-no-holder-validation/post_companies-no-holder-validation.feature:20<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;Teste CNPJ&quot;&quot;2019-03-18&quot;&quot;cnpj&quot;&quot;166&quot;&quot;5&quot;&quot;2&quot; (6.994s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies No Holder Validation (8.783s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 201 (0.003s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Customer Id (0.007s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Account Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Card Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Phone Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve gerar um Addresses Id (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve salvar o novo portador na base Cateno (12.331s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f1s1" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@noholdervalidation</div><div class="chip"><i class="material-icons rotate-45">label</i>@regressao</div><div class="chip"><i class="material-icons rotate-45">label</i>@companyNegativo</div><h5>Post - perfilamento (6.210s)</h5>
+features/specs/companies-no-holder-validation/post_companies-no-holder-validation.feature:32<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> um companyName, foundingDate, taxId, intermediaryId, productId, commercialOriginId &quot;Teste CNPJ&quot;&quot;2019-03-18&quot;&quot;cnpj&quot;&quot;1&quot;&quot;5&quot;&quot;2&quot; (4.536s)</li>
+<li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies No Holder Validation (1.674s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 400 (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> devera exibir a mensagem &quot;Usuário não tem permissão de acessar&quot; (0.000s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f1s2" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@noholdervalidation</div><div class="chip"><i class="material-icons rotate-45">label</i>@regressao</div><div class="chip"><i class="material-icons rotate-45">label</i>@companyNegativo</div><h5>Post - bad request - já cadastrado (0.704s)</h5>
+features/specs/companies-no-holder-validation/post_companies-no-holder-validation.feature:43<ul class="collection stepList"><li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao POST para o servico Companies No Holder Validation (0.704s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 400 (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> devera exibir a mensagem &quot;Portador 98891629000170 já cadastrado com produto 5 do intermediario 166&quot; (0.000s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f2s0" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@getCompanies</div><h5>GET customerId (5.522s)</h5>
+features/specs/companies/get_companies.feature:13<ul class="collection stepList"><li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao GET para o servico Companies companyId &quot;41947&quot; (5.522s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 200 (0.000s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f2s1" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@companies</div><div class="chip"><i class="material-icons rotate-45">label</i>@getCompanies</div><h5>GET customerId Perfilamento (1.905s)</h5>
+features/specs/companies/get_companies.feature:24<ul class="collection stepList"><li class="collection-item step passed">
+<b>Quando </b> faco uma solicitacao GET para o servico Companies companyId &quot;220&quot; (1.905s)</li>
+<li class="collection-item step passed">
+<b>Entao </b> o codigo de resposta HTTP deve ser igual 403 (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> deve exibir mensagem do Perfilamento &quot;User is not authorized to access this resource with an explicit deny&quot; (0.000s)</li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {$('#g0f0s0').modal();$('#g0f0s1').modal();$('#g0f0s2').modal();$('#g0f0s3').modal();$('#g0f0s4').modal();$('#g0f0s5').modal();$('#g0f1s0').modal();$('#g0f1s1').modal();$('#g0f1s2').modal();$('#g0f1s3').modal();$('#g0f2s0').modal();$('#g0f2s1').modal();$('#g0f2s2').modal();});
+</script>
+<main class="brown lighten-5">
+<div class="row"><div id="overview" class="col s12 brown lighten-5">
+<div class="row">
+<div class="col m4 s12">
+<canvas id="featuresDoughnut" width="400" height="400"></canvas>
+<table id="metaDataFeatures" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col m4 s12">
+<canvas id="scenariosDoughnut" width="400" height="400"></canvas>
+<table id="metaDataScenarios" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col m4 s12">
+<table id="metaData" class="bordered">
+<tbody>
+<tr><th>Total Time</th><td>2m 12.67s</td></tr><tr>
+<th>API</th>
+<td>Portadores</td>
+</tr></tbody>
+</table>
+</div>
+</div></div><div id="features" class="col s12 brown lighten-5 white-text">
+<ul class="featureList collapsible popout" data-collapsible="expandable">
+<li class="feature working">
+<div class="collapsible-header brown lighten-1 waves-effect waves-light">
+<i class="material-icons">featured_play_list</i>
+<b>Funcionalidade</b>&nbsp;Cadastro Portador&nbsp;(1m 30.21s)
+</div><div class="collapsible-body brown lighten-4">
+<ul class="collection scenarioList"><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s0">
+<b>Esquema do Cenario</b> Post Company&nbsp;(46.367s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s1">
+<b>Esquema do Cenario</b> Post Cadastro REPROVADO&nbsp;(19.214s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s2">
+<b>Esquema do Cenario</b> Post Cadastro JA PENDENTE - Segunda tentativa de cadastro&nbsp;(8.830s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s3">
+<b>Esquema do Cenario</b> Post Perfilamento&nbsp;(6.098s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s4">
+<b>Esquema do Cenario</b> Post Cadastro PENDENTE Neurotech&nbsp;(9.699s)
+</a>
+</li></ul>
+</div>
+</li><li class="feature working">
+<div class="collapsible-header brown lighten-1 waves-effect waves-light">
+<i class="material-icons">featured_play_list</i>
+<b>Funcionalidade</b>&nbsp;Cadastro Portador Sem Neurotech&nbsp;(35.033s)
+</div><div class="collapsible-body brown lighten-4">
+<ul class="collection scenarioList"><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f1s0">
+<b>Esquema do Cenario</b> Post Cadastro - cenario positivo&nbsp;(28.119s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f1s1">
+<b>Esquema do Cenario</b> Post - perfilamento&nbsp;(6.210s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f1s2">
+<b>Esquema do Cenario</b> Post - bad request - já cadastrado&nbsp;(0.704s)
+</a>
+</li></ul>
+</div>
+</li><li class="feature working">
+<div class="collapsible-header brown lighten-1 waves-effect waves-light">
+<i class="material-icons">featured_play_list</i>
+<b>Funcionalidade</b>&nbsp;Consulta Portador&nbsp;(7.427s)
+</div><div class="collapsible-body brown lighten-4">
+<ul class="collection scenarioList"><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f2s0">
+<b>Esquema do Cenario</b> GET customerId&nbsp;(5.522s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f2s1">
+<b>Esquema do Cenario</b> GET customerId Perfilamento&nbsp;(1.905s)
+</a>
+</li></ul>
+</div>
+</li>
+</ul></div><div id="summary" class="col s12 brown lighten-5">
+<table id="summaryTable" class="bordered brown lighten-1 white-text" width="100%">
+<thead>
+<tr>
+<th class="hide-on-small-only">Feature</th>
+<th>Scenario</th>
+<th class="hide">Tags</th>
+<th>Status</th>
+<th class="hide-on-small-only">Error</th>
+</tr>
+</thead>
+<tbody><tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s0">Post Company</a>
+</td><td class="hide">
+@companies. @regressao. @company_post. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s1">Post Cadastro REPROVADO</a>
+</td><td class="hide">
+@companies. @reprovado. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s2">Post Cadastro JA PENDENTE - Segunda tentativa de cadastro</a>
+</td><td class="hide">
+@companies. @customers_pendente. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s3">Post Perfilamento</a>
+</td><td class="hide">
+@companies. @customers. @regressao. @Perfilamento. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s4">Post Cadastro PENDENTE Neurotech</a>
+</td><td class="hide">
+@companies. @neurotechPJ. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador Sem Neurotech
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f1s0">Post Cadastro - cenario positivo</a>
+</td><td class="hide">
+@companies. @noholdervalidation. @regressao. @company. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador Sem Neurotech
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f1s1">Post - perfilamento</a>
+</td><td class="hide">
+@companies. @noholdervalidation. @regressao. @companyNegativo. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Cadastro Portador Sem Neurotech
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f1s2">Post - bad request - já cadastrado</a>
+</td><td class="hide">
+@companies. @noholdervalidation. @regressao. @companyNegativo. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Consulta Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f2s0">GET customerId</a>
+</td><td class="hide">
+@companies. @getCompanies. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Consulta Portador
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f2s1">GET customerId Perfilamento</a>
+</td><td class="hide">
+@companies. @getCompanies. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+</tbody>
+</table></div><div id="errors" class="col s12 brown lighten-5">
+<ul class="errorList collapsible popout" data-collapsible="expandable"></ul></div>
+</div>
+</main><footer class="page-footer brown lighten-4">
+<div class="footer-copyright brown lighten-1">
+<div class="container">
+Happy Reporting!
+<a class="white-text text-lighten-4 right" href="https://reportbuilder.rajatthareja.com">Generated by Report Builder</a>
+</div>
+</div>
+</footer><script type="text/javascript" src="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.8/js/report.builder.min.js"></script></body>
+</html>
