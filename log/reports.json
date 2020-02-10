@@ -1,0 +1,192 @@
+[
+  {
+    "uri": "features/specs/customers/post_customers.feature",
+    "id": "customers",
+    "keyword": "Funcionalidade",
+    "name": "Customers",
+    "description": "",
+    "line": 4,
+    "comments": [
+      {
+        "value": "# encoding: utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "customers;post-customer;;2",
+        "keyword": "Esquema do Cenario",
+        "name": "Post Customer",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@run",
+            "line": 6
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "usuario logado como emissor",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "os dados do novo portador \"ALEXANDRE KENJI SHIMIZU\" \"34266611870\" \"1995-05-02\" \"201\" \"25\"",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1904760000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faco uma solicitacao POST para o servico Holders",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13018051000
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "o codigo de resposta HTTP deve ser igual \"201\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 579000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a portador cadastrado no banco de dados",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 980762000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49000
+            }
+          }
+        ]
+      },
+      {
+        "id": "customers;post-companies;;2",
+        "keyword": "Esquema do Cenario",
+        "name": "Post Companies",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@run",
+            "line": 18
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "usuario logado como emissor",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "os dados do novo portador \"ITAU\" \"60701190296461\" \"2002-09-12\" \"61\" \"25\"",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2825071000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faco uma solicitacao POST para o servico Holders",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4618609000
+            }
+          },
+          {
+            "keyword": "Entao ",
+            "name": "o codigo de resposta HTTP deve ser igual \"201\"",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a portador cadastrado no banco de dados",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/customers/steps_post.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 938839000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

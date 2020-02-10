@@ -63,7 +63,7 @@ class Cadastro < Holders
             puts "O id_portador '#{@id_portador}' foi encontrado, realizando delete"
             MYSQL.new.query_delete_portador(@id_portador)    
         else
-            puts "OK"    
+            puts "Portador sera cadastrado"    
         end
     end
     

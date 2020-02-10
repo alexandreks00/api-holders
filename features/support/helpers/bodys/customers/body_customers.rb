@@ -1,9 +1,9 @@
 # module BodyCustomers
-class Body
+class Body 
     def body_postCustomers(name, birth_date, tax_id, intermediary_id, modality_id, id_configuracao_cartao)
         $body = {
             "name": name,
-            "tax_id": $tax_id,
+            "tax_id": tax_id,
             "birth_date": birth_date,
             "email": "alexandre.shimizu@cateno.com.br",
             "mother_name": "Pereira",

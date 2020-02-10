@@ -33,22 +33,25 @@ class MYSQL
 
   def query_verifica_cadastro_portador(tax_id, tipo_portador)
       
-      tipo_portador == "PF"? 
-        @query =  @client.query(
-          "SELECT id_portador 
+      if tipo_portador == "PF"
+        @query =  @client.query("SELECT id_portador 
           FROM cateno_portador_cadastro.portador
           INNER JOIN cateno_portador_cadastro.portador_pf pf 
           ON pf.id_portador_fk = portador.id_portador
-          WHERE pf.cpf = '#{tax_id}' and ativo = 1") :
+          WHERE pf.cpf = '#{tax_id}' and ativo = 1")
+      else
         @query =  @client.query(
             "SELECT id_portador 
             FROM cateno_portador_cadastro.portador
             INNER JOIN cateno_portador_cadastro.portador_pj pj 
             ON pj.id_portador_fk = portador.id_portador
             WHERE pj.cnpj = '#{tax_id}' and ativo = 1")
-          
-      if @query 
+      end   
+      
+      if @query.first
         return @query.first["id_portador"]
+      else
+        return false
       end
                                         
   end

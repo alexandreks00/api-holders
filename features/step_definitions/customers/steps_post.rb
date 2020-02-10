@@ -1,17 +1,17 @@
 
 Quando("faco uma solicitacao POST para o servico Holders") do
 
-    if @tipo_portador == PF
+    if @tipo_portador == "PF"
         @response = Request.new.post_customers($body, 
                 HeaderSensedia.new.header_sensedia) 
     else 
-        @response = Request.new.post_Companies($body, 
+        @response = Request.new.post_companies($body, 
                     HeaderSensedia.new.header_sensedia) 
     end         
 end
 
 Entao("a portador cadastrado no banco de dados") do
-    Cadastro.isCadastrado(@response["id"], @tipo_portador)
+    Cadastro.new.isCadastrado(@response["id"], @tipo_portador)
 end
 
 
@@ -22,17 +22,16 @@ Dado("os dados do novo portador {string} {string} {string} {string} {string}") d
     @tipo_portador = Cadastro.new.isCpf(Cadastro.tax_id)
     @id_configuracao_cartao = Cadastro.new.pre_modalidade(modality_id)
    
-
     if @tipo_portador
             @tipo_portador = "PF"
-            Cadastro.pre_portador(Cadastro.tax_id, @tipo_portador)
+            Cadastro.new.pre_portador(Cadastro.tax_id, @tipo_portador)
             $body = Body.new.body_postCustomers(Cadastro.name, Cadastro.birth_date, 
             Cadastro.tax_id, Cadastro.intermediary_id, 
             Cadastro.modality_id, @id_configuracao_cartao)
         
     else
             @tipo_portador = "PJ"        
-            portador.pre_portador(Cadastro.tax_id, @tipo_portador)
+            Cadastro.new.pre_portador(Cadastro.tax_id, @tipo_portador)
             $body = Body.new.body_postCompanies(Cadastro.name, Cadastro.birth_date, 
             Cadastro.tax_id, Cadastro.intermediary_id, 
             Cadastro.modality_id, @id_configuracao_cartao)
